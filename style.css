@@ -1,0 +1,560 @@
+/* Navbar senza contenitore */
+.navbar {
+  padding: 0.8rem 1rem;
+  justify-content: center; /* centra il contenuto */
+}
+
+/* Rimuove limiti di container */
+.navbar .container,
+.navbar .container-fluid {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+/* Lista della navbar centrata */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Link della navbar */
+.navbar-nav .nav-link {
+  position: relative;
+  font-size: 1.1rem;
+  font-family: "Lora", serif;
+  color: #4e3f33;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  margin: 0 20px;
+}
+
+/* Linea sotto il link al passaggio */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #000; /* colore della linea */
+  transition: width 0.3s ease;
+}
+
+/* Effetto hover + attivo */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Cambia colore al passaggio */
+.navbar-nav .nav-link:hover {
+  color: #000;
+}
+
+.navbar-brand {
+    color: #4e3f33;
+            text-align: center;
+           font-family: "Dancing script", cursive;
+            font-size: 2em;
+
+}
+
+
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+ 
+
+
+
+        
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Etichette */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #4a3f35;
+}
+
+/* Gruppi */
+.form-group {
+  margin-bottom: 25px;
+}
+
+/* Input, select, textarea */
+input.form-control,
+select.form-control,
+textarea.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus {
+  border-color: #c2a27e;
+  box-shadow: 0 0 5px rgba(194, 162, 126, 0.4);
+  outline: none;
+}
+
+/* Multiple select specific */
+select[multiple] {
+  height: auto;
+  min-height: 100px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form {
+    padding: 20px;
+  }
+
+  input.form-control,
+  select.form-control,
+  textarea.form-control {
+    font-size: 15px;
+  }
+}
+
+
+/* Sezione principale */
+
+form#Contattaci {
+  align-content: center;
+  margin: auto 20px;
+}
+
+#Contattaci form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-content: center;
+}
+
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  text-align: center;
+  display: block;
+}
+
+/* Campi input e textarea */
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+h1 {
+            color: rgb(94, 54, 72);
+            text-align: center;
+           font-family: "Dancing script", cursive;
+            font-size: 7em;
+        }
+
+h2 {
+            color: #4e3f33;
+            text-align: center;
+           font-family: "Dancing script", cursive;
+            font-size: 2em;
+        }
+
+/* Testi piccoli */
+.form-text {
+  font-size: 12px;
+  color: #666;
+  min-height: 14px;
+}
+
+ h3 {
+            color: #4e3f33;
+            margin: 30px 0 10px;
+            text-align: center;
+            font-size: 2em;
+            font-family: "Lora", serif;
+        }
+
+        h4 {
+            color: #666666;
+            margin: 30px 0 10px;
+            text-align: center;
+            font-size: 0.9em;
+            font-family: "Lora", serif;
+        }
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  color: #494949;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.box {
+  display: flex;             /* rende immagine e testo affiancati */
+  align-items: center;       /* centra verticalmente il testo rispetto all'immagine */
+  justify-content: flex-start;
+  gap: 0;                 /* distanza tra immagine e testo */
+  margin: 20px 0;
+}
+
+.box img {
+  width: 600px;              /* larghezza fissa dell'immagine */
+  height: auto;              /* mantiene proporzioni */
+  border-radius: 10px;
+  margin-left: 100px;       /* opzionale: angoli arrotondati */
+}
+
+.box .text {
+  margin-left: 0;          /* testo attaccato all’immagine */
+}
+
+.box .text h3 {
+    margin: 0px;
+    text-align: center;
+  font-size: 4rem;
+  color: #4e3f33;
+  font-family: "Dancing script", cursive;
+}
+
+.box .text h4 {
+  margin-top: 10px;
+  margin: 15px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #7f6c5a;
+  font-family: "Lora", serif;
+  
+}
+
+
+/* Stile dell'accordion */
+.accordion {
+    max-width: 800px;   /* larghezza massima dell'accordion */
+    margin: 0 auto;     /* centra orizzontalmente */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Accordion item */
+.accordion-item {
+    border: none;       /* rimuove bordi standard di Bootstrap */
+    margin-bottom: 10px;
+}
+
+/* Header del pulsante */
+.accordion-button {
+    background-color: #fff;
+    color: #444;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #ffffff; /* leggero color crema */
+    color: #b38b59;           /* dorato elegante */
+}
+
+/* Pulsante quando chiuso */
+.accordion-button:not(.collapsed) {
+    background-color: #fafafa !important;
+    color: #7f6c5a !important;
+}
+.accordion-button:focus {
+    box-shadow: none !important; 
+}
+
+/* Corpo dell'accordion */
+.accordion-body {
+    background-color: #fff;
+    
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 15px 20px;
+    border-left: 3px solid #b38b59; /* decorazione dorata a sinistra */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .accordion {
+        width: 95%;
+    }
+
+    .accordion-button {
+        font-size: 1rem;
+    }
+
+    .accordion-body {
+        font-size: 0.95rem;
+    }
+}
+
+
+#carouselExampleIndicators .carousel-item {
+  display: flex;
+  justify-content: center; /* Centra orizzontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height: 1000px;           /* Altezza fissa (puoi modificarla) */
+}
+
+#carouselExampleIndicators .carousel-item img {
+  max-height: 100%;
+  width: auto;
+}
+
+
+/* ===== Card quadrate ===== */
+.card {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 80%; /* l’immagine occupa il 60% della card */
+    object-fit: cover;
+}
+
+.card-body {
+    height: 40%; /* il resto dello spazio per titolo e testo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    background-color: #251709; /* nuovo colore (borgogna scuro) */
+    color: #fff;               /* testo bianco */
+    border: none;              /* elimina bordo */
+    padding: 10px 20px;        /* dimensione bottone */
+    border-radius: 10px;       /* angoli arrotondati */
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #4b1c1c; /* colore hover leggermente più chiaro */
+}
+
+#miaImmagine {
+  width: 1300px;          /* larghezza */
+  height: auto;          /* altezza proporzionale */
+  border-radius: 10px;   /* angoli arrotondati */
+  display: block;        /* utile per centratura */
+  margin: 0 auto;        /* centra orizzontalmente */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* ombra */
+}
+
+#dettagli1 {
+    text-align: left; /* centra tutto il contenuto */
+    max-width: 800px;   /* opzionale: limita larghezza per leggibilità */
+    margin: 0 auto;
+    font-family: "Lora", serif;
+    font-size: 1.5em;
+}
+
+#dettagli1 ul {
+    list-style-type: disc;  /* puntini */
+    padding-left: 30px;     /* distanza dei puntini dal bordo */
+    margin: 30px auto;
+    display: inline-block;  /* permette di centrare l'intero elenco */
+    text-align: center;       /* testo dei punti allineato a sinistra */
+    font-family: "Lora", serif;
+    font-size: 0.9em;
+}
+
+#dettagli1 ul li {
+    margin-bottom: 10px;    /* spazio tra i punti */
+    font-family: "Lora", serif;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+/* Contenitore per centrare il video */
+video {
+  display: block;       /* trasforma il video in block-level element */
+  margin: 0 auto;       /* centra orizzontalmente */
+  max-width: 90%;       /* mantiene il video responsive */
+  height: auto;         /* mantiene proporzioni */
+  border-radius: 8px;   /* opzionale: arrotonda gli angoli */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* opzionale: effetto ombra */
+}
+
+/* Se vuoi aggiungere spazio sopra e sotto il video */
+video {
+  margin: 40px auto;    /* 40px sopra e sotto, centrato orizzontalmente */
+}
+
+/* Contenitore a due colonne */
+.image-grid {
+  display: flex;
+  gap: 20px;            /* distanza tra le immagini */
+  justify-content: center;
+  flex-wrap: wrap;       /* va a capo su schermi piccoli */
+}
+
+/* Stile delle immagini */
+.image-grid img {
+  width: 48%;            /* due immagini affiancate */
+  border-radius: 12px;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Piccolo effetto al passaggio del mouse */
+.image-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+#Informazioni {
+  width: 1000px;          /* larghezza */
+  height: auto;          /* altezza proporzionale */
+  border-radius: 10px;   /* angoli arrotondati */
+  display: block;        /* utile per centratura */
+  margin: 0 auto;        /* centra orizzontalmente */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* ombra */
+}
+
+#Agenda2026 {
+  width: 1600px;          /* larghezza */
+  height: auto;          /* altezza proporzionale */
+  border-radius: 10px;   /* angoli arrotondati */
+  display: block;        /* utile per centratura */
+  margin: 0 auto;        /* centra orizzontalmente */
+  
+}
+
+#Shop {
+  margin: 0px;
+    text-align: center;
+  font-size: 4rem;
+  color: #4e3f33;
+  font-family: "Dancing script", cursive;
+}
+
+
+    /* Stile del link */
+    a.dettagli {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      background-color: #4e3f33;
+      color: #fff;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    a.dettagli:hover {
+      background-color: #4e3f33;
+      transform: scale(1.05);
+    }
+
+    a.dettagli:active {
+      background-color: #4e3f33;
+      transform: scale(0.98);
+    }
+    
+    #Cliccaqui {
+       margin: 0px;
+    text-align: center;
+  font-size: 4rem;
+  color: #4e3f33;
+  font-family: "Dancing script", cursive;
+    }
+
+
+    .box1 {
+  display: flex;             /* rende immagine e testo affiancati */
+  align-items: center;       /* centra verticalmente il testo rispetto all'immagine */
+  justify-content: flex-start;
+  gap: 0;                 /* distanza tra immagine e testo */
+  margin: 20px 0;
+}
+
+.box1 img {
+  width: 600px;              /* larghezza fissa dell'immagine */
+  height: auto;              /* mantiene proporzioni */
+  border-radius: 10px;
+  margin-left: 100px;       /* opzionale: angoli arrotondati */
+}
+
+.box1 .text {
+  margin-left: 0;          /* testo attaccato all’immagine */
+}
+
+.box1 .text h3 {    
+  margin: 0px;
+    text-align: center;
+  font-size: 4rem;
+  color: #4e3f33;
+  font-family: "Dancing script", cursive;
+}
+
+.box1 .text h4 {
+  margin-top: 10px;
+  margin: 15px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #7f6c5a;
+  font-family: "Lora", serif;
+  
+}
