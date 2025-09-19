@@ -461,7 +461,8 @@ video {
 
 /* Stile delle immagini */
 .image-grid img {
-  width: 48%;            /* due immagini affiancate */
+   flex: 1 1 45%; /* 50% della riga meno metà del gap */         /* due immagini affiancate */
+ max-width: 700px;
   border-radius: 12px;
   cursor: default;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -471,6 +472,13 @@ video {
 .image-grid img:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 576px) {
+  .image-grid img {
+    flex: 1 1 100%; /* una immagine per riga */
+    max-width: 100%; /* occupa tutta la larghezza disponibile */
+  }
 }
 
 #Informazioni {
