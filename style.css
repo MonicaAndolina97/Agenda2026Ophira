@@ -359,7 +359,7 @@ footer {
 
 /* ===== Card quadrate ===== */
 .card {
-    width: 400px;
+    width: 100%;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
