@@ -1,7 +1,15 @@
+body {
+  background-color: #eee4d9;  /* colore a tua scelta */
+}
+
+
 /* Navbar senza contenitore */
 .navbar {
+  display: flex ;
   padding: 0.8rem 1rem;
   justify-content: center; /* centra il contenuto */
+  background-color: transparent;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Rimuove limiti di container */
@@ -186,10 +194,10 @@ form#Contattaci {
 }
 
 h1 {
-            color: rgb(94, 54, 72);
+            color: #4e3f33;
             text-align: center;
            font-family: "Dancing script", cursive;
-            font-size: 7em;
+            font-size: 4em;
         }
 
 h2 {
@@ -231,42 +239,42 @@ footer {
   text-align: center;
 }
 
-.box {
-  display: flex;             /* rende immagine e testo affiancati */
-  align-items: center;       /* centra verticalmente il testo rispetto all'immagine */
-  justify-content: flex-start;
-  gap: 0;                 /* distanza tra immagine e testo */
-  margin: 20px 0;
+/* --- Sezione immagini + testo --- */
+.row img {
+  width: 100%;          /* riempie la colonna */
+  height: auto;         /* mantiene proporzioni */
+  border-radius: 10px;  /* angoli arrotondati */
+  display: block;
+  margin: 0 auto;       /* centra su schermi piccoli */
 }
 
-.box img {
-  width: 600px;              /* larghezza fissa dell'immagine */
-  height: auto;              /* mantiene proporzioni */
-  border-radius: 10px;
-  margin-left: 100px;       /* opzionale: angoli arrotondati */
+/* Contenitore testo */
+.row .text-content {
+  padding: 15px;
+  text-align: center;   /* testo centrato anche su desktop */
 }
 
-.box .text {
-  margin-left: 0;          /* testo attaccato all’immagine */
-}
-
-.box .text h3 {
-    margin: 0px;
-    text-align: center;
-  font-size: 4rem;
+/* Titolo grande */
+.row .col-md-6 h3 {
+  margin: 10px 0;
+  font-size: 3rem;
   color: #4e3f33;
-  font-family: "Dancing script", cursive;
+  font-family: "Dancing Script", cursive;
 }
 
-.box .text h4 {
-  margin-top: 10px;
-  margin: 15px;
-  text-align: center;
+/* Sottotitolo */
+.row .col-md-6 h4 {
+  margin: 15px 0;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #7f6c5a;
   font-family: "Lora", serif;
-  
+  line-height: 1.6;
+}
+
+/* Spazio extra tra le sezioni */
+.row + .row {
+  margin-top: 40px;
 }
 
 
@@ -277,33 +285,34 @@ footer {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #eee4d9; 
+    
 }
 
 /* Accordion item */
 .accordion-item {
     border: none;       /* rimuove bordi standard di Bootstrap */
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 /* Header del pulsante */
 .accordion-button {
-    background-color: #fff;
+    background-color: #eee4d9; 
     color: #444;
     font-size: 1.2rem;
     font-weight: 600;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .accordion-button:hover {
-    background-color: #ffffff; /* leggero color crema */
+    background-color: #eee4d9;  /* leggero color crema */
     color: #b38b59;           /* dorato elegante */
 }
 
 /* Pulsante quando chiuso */
 .accordion-button:not(.collapsed) {
-    background-color: #fafafa !important;
+   background-color: #eee4d9; 
     color: #7f6c5a !important;
 }
 .accordion-button:focus {
@@ -312,11 +321,10 @@ footer {
 
 /* Corpo dell'accordion */
 .accordion-body {
-    background-color: #fff;
-    
+    background-color: #eee4d9; 
     font-size: 1rem;
     line-height: 1.6;
-    padding: 15px 20px;
+    padding: 10px 15px;
     border-left: 3px solid #b38b59; /* decorazione dorata a sinistra */
 }
 
@@ -394,7 +402,7 @@ footer {
 }
 
 #miaImmagine {
-  width: 1300px;          /* larghezza */
+  max-width: 100%;           /* larghezza */
   height: auto;          /* altezza proporzionale */
   border-radius: 10px;   /* angoli arrotondati */
   display: block;        /* utile per centratura */
@@ -465,7 +473,7 @@ video {
 }
 
 #Informazioni {
-  width: 1000px;          /* larghezza */
+  max-width: 100%;          /* larghezza */
   height: auto;          /* altezza proporzionale */
   border-radius: 10px;   /* angoli arrotondati */
   display: block;        /* utile per centratura */
@@ -474,7 +482,7 @@ video {
 }
 
 #Agenda2026 {
-  width: 1600px;          /* larghezza */
+  max-width: 100%;            /* larghezza */
   height: auto;          /* altezza proporzionale */
   border-radius: 10px;   /* angoli arrotondati */
   display: block;        /* utile per centratura */
@@ -530,7 +538,7 @@ video {
 }
 
 .box1 img {
-  width: 600px;              /* larghezza fissa dell'immagine */
+  max-width: 100%;              /* larghezza fissa dell'immagine */
   height: auto;              /* mantiene proporzioni */
   border-radius: 10px;
   margin-left: 100px;       /* opzionale: angoli arrotondati */
@@ -557,4 +565,29 @@ video {
   color: #7f6c5a;
   font-family: "Lora", serif;
   
+}
+
+
+.scrolling-text {
+  background-color: #eee4d9;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-text p {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-family: "Lora", serif;
+  color: #4e3f33;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
